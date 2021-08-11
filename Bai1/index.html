@@ -15,8 +15,10 @@
 
     <link href="//db.onlinewebfonts.com/c/3cff9206b4c8d578245ef1aaeeaf9e84?family=SF+Pro+Display" rel="stylesheet"
         type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
 
     <title>Popup Sign-up Facebook</title>
@@ -49,26 +51,26 @@
                     <div class="info1-name">
                         <div class="info1-last-name" style="">
                             <input type="text" id="last-name" placeholder="Họ" style="">
-                            <i class="fa fa-exclamation-circle js-last-name-warning " aria-hidden="true"
+                            <i class="fa fa-exclamation-circle js-last-name-warning hidden" aria-hidden="true"
                                 style="color: #B94A48;"></i>
                         </div>
                         <div class=" info1-first-name" style="">
                             <input type="text" id="first-name" placeholder="Tên">
-                            <i class="fa fa-exclamation-circle js-first-name-warning " aria-hidden="true"
+                            <i class="fa fa-exclamation-circle js-first-name-warning hidden" aria-hidden="true"
                                 style="color: #B94A48; "></i>
                         </div>
                     </div>
 
                     <div class="info1-phone-email">
                         <input type="text" id="phone-email" placeholder="Số di động hoặc email" style="">
-                        <i class="fa fa-exclamation-circle js-phone-email-warning " aria-hidden="true"
+                        <i class="fa fa-exclamation-circle js-phone-email-warning hidden" aria-hidden="true"
                             style="color: #B94A48; "></i>
                     </div>
 
                     <div class="info1-password">
 
                         <input type="password" id="password" placeholder="Mật khẩu mới" style="">
-                        <i class="fa fa-exclamation-circle js-password-warning " aria-hidden="true"
+                        <i class="fa fa-exclamation-circle js-password-warning hidden" aria-hidden="true"
                             style="color: #B94A48; "></i>
                     </div>
                 </div>
@@ -77,7 +79,7 @@
                         <div class="input__title info2-birthday" style="position: relative;">
                             Ngày sinh
                             <i class="fa fa-question-circle icon-question" aria-hidden="true"></i>
-                            <i class="fa fa-exclamation-circle js-birthday-warning" aria-hidden="true"
+                            <i class="fa fa-exclamation-circle js-birthday-warning hidden" aria-hidden="true"
                                 style="color: #B94A48; position: absolute;"></i>
                         </div>
                         <div class="input__birthday">
@@ -260,25 +262,48 @@
                         <div class="input__title info2-gender" style="position: relative;">
                             Giới tính
                             <i class="fa fa-question-circle icon-question" aria-hidden="true"></i>
-                            <i class="fa fa-exclamation-circle js-gender-warning " aria-hidden="true"
+                            <i class="fa fa-exclamation-circle js-gender-warning hidden" aria-hidden="true"
                                 style="color: #B94A48; position: absolute;"></i>
                         </div>
                         <div class="input__sex">
                             <span class="input-sex-item input-female">
                                 <label class="label__input">Nữ</label>
-                                <input type="radio" name="gender" value="0" onchange="notify()" />
+                                <input type="radio" name="gender" value="0" id="gender" onclick="notify(0)" />
                             </span>
                             <span class="input-sex-item input-male">
                                 <label class=" label__input">Nam</label>
-                                <input type="radio" name="gender" value="1" onchange="notify()" />
+                                <input type="radio" name="gender" value="1" id="gender" onclick="notify(1)" />
                             </span>
                             <span class="input-sex-item input-option">
                                 <label class="label__input">Tùy chỉnh</label>
-                                <input type="radio" name="gender" value="2" onchange="notify()" />
+                                <input type="radio" name="gender" value="2" id="gender" onclick=" notify(2)" />
                             </span>
                         </div>
+
+                        <div class="input__sex-option js-gender-option hidden" style="">
+                            <div style="display: flex">
+                                <select aria-label="Tháng" name="gender-option" id="gender-option" style="width: 100%">
+                                    <option value="0" selected>Chọn danh xưng</option>
+                                    <option value="1">Cô ấy: "Chúc cô ấy sinh nhật vui vẻ!"</option>
+                                    <option value="2">Anh ấy: "Chúc anh ấy sinh nhật vui vẻ!"</option>
+                                    <option value="3">Họ ấy: "Chúc họ ấy sinh nhật vui vẻ!"</option>
+                                </select>
+                                <!-- <i class="fa fa-exclamation-circle js-gender-option-warning" aria-hidden="true"
+                                    style="color: #B94A48; position: absolute;"></i> -->
+                            </div>
+                            <div class="input__title"
+                                style="display: flex; flex-direction: column; margin-right: 10px;">
+                                Danh xưng của bạn hiển thị với tất cả mọi người
+                                <div style="display: flex">
+
+                                    <input type="text" id="appellation" placeholder="Giới tính (không bắt buộc)"
+                                        style="width: 100%" ; />
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="policy">
+                    <div class=" policy">
                         <p>
                             Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="#">Điều khoản</a>, <a href="#">Chính
                                 sách dữ
