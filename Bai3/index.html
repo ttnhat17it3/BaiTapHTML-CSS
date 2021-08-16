@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài 3 - Slider</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="slider middle">
+    <!-- Slide container - START -->
+    <div class="slides">
+      <!-- Radio button - START -->
+      <input type="radio" name="radio-btn" id="radio1" checked>
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <!-- Radio button - END -->
+
+      <!-- Slide element - START -->
+      <div class="slide s1">
+        <img
+          src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          alt="">
+      </div>
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=840&q=80"
+          alt="">
+      </div>
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80"
+          alt="">
+      </div>
+      <div class="slide">
+        <img
+          src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
+          alt="">
+      </div>
+      <!-- Slide element - END -->
+
+      <!-- Navigation - START -->
+      <div class="navigation">
+        <label for="radio1" class="bar bar1"></label>
+        <label for="radio2" class="bar bar2"></label>
+        <label for="radio3" class="bar bar3"></label>
+        <label for="radio4" class="bar bar4"></label>
+      </div>
+      <!-- Navigation - END -->
+    </div>
+    <!-- Slide container - END -->
+  </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
