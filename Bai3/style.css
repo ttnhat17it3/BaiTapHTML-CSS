@@ -87,3 +87,26 @@ input[name="radio-btn"] {
 #radio4:checked ~ .s1 {
   margin-left: -60%;
 }
+
+@media screen and (max-width: 750px) {
+  .slider {
+    max-width: 500px;
+    max-height: 250px;
+
+    --plusBar: 7px;
+    --barWidth: 20px;
+    --barHeight: 4px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider {
+    max-width: 300px;
+    max-height: 150px;
+
+    --plusBar: 5px;
+    --barWidth: 15px;
+    --barHeight: 3px;
+  }
+}
+
